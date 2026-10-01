@@ -30,7 +30,7 @@ Deadline: **Sun 04 Oct 2026, 06:57** (confirm timezone in the email). Submit onl
 4. **[done]** Baselines, warehouse model + no-attention control, chronological evaluation, 5 seeds.
 5. **[done]** Distribution shift (B-noise / B-spikes / B-full), attention-weight plots.
 6. **[done]** Failure investigation (F1/F2 spike behaviour).
-7. **[do now]** Fresh-clone run, submit.
+7. **[done]** Fresh-clone run (01 Oct 2026: data regen byte-identical, pytest 32/32, gradcheck identical, shift identical, warehouse smoke ok), submit.
 
 ## Hypothesis verdicts (do not edit H1–H5; record here only)
 - H1 confirmed (6× slowdown at d_k=64; unscaled d_k=256 never learns; scaled init_max 0.42 marginally above 0.2–0.35 band).
