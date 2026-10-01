@@ -1,0 +1,24 @@
+# Gradient verification (Phase 0 V1: float64 central diff eps=1e-5, tol 1e-6)
+float64 W_Q: max_rel_err=1.725e-09 max|grad|=2.2267 PASS
+float64 W_K: max_rel_err=7.872e-10 max|grad|=2.1658 PASS
+float64 W_V: max_rel_err=8.326e-11 max|grad|=5.6067 PASS
+float64 X: max_rel_err=2.566e-09 max|grad|=1.3990 PASS
+float64 overall: PASS
+float32 W_Q: max_rel_err=6.237e-01 (roundoff reference, not a bug)
+float32 W_K: max_rel_err=1.493e-01 (roundoff reference, not a bug)
+float32 W_V: max_rel_err=1.021e-01 (roundoff reference, not a bug)
+float32 X: max_rel_err=9.160e-01 (roundoff reference, not a bug)
+# Numerical stability demo (PRD s11)
+exp100_fp32_is_inf: True
+naive_has_nan: True
+stable_row: [0.25, 0.25, 0.25, 0.25]
+stable_is_uniform: True
+logit80_naive_ok: True
+logit80_stable_ok: True
+logit89_naive_ok: False
+logit89_stable_ok: True
+logit90_naive_ok: False
+logit90_stable_ok: True
+logit100_naive_ok: False
+logit100_stable_ok: True
+Explanation: float32 central differences divide ~1e-7-scale roundoff by eps=1e-5, so errors up to ~1e-1 here are expected (6 orders of magnitude above the float64 1e-9 level) — roundoff, not a bug. float64 has ~1e-16 roundoff and passes 1e-6. Naive softmax exp() overflows fp32 at ~89; max-subtraction is the identity softmax(x)=softmax(x-c) that keeps exponents <= 0.

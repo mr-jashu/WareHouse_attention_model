@@ -1,0 +1,11 @@
+# Toy ablation summary (associative recall, 5 seeds, steps budget 3000)
+H1: init max-weight ~0.2-0.35 scaled vs >0.8 unscaled at d_k=64; unscaled needs >=1.5x steps to 90% at d_k=64; no difference at d_k=4.
+
+d_k=4 scaled: acc=1.000 steps90=200 init_max=0.395 reached=5/5
+d_k=4 unscaled: acc=1.000 steps90=220 init_max=0.588 reached=5/5
+d_k=16 scaled: acc=1.000 steps90=100 init_max=0.420 reached=5/5
+d_k=16 unscaled: acc=1.000 steps90=190 init_max=0.806 reached=5/5
+d_k=64 scaled: acc=1.000 steps90=50 init_max=0.415 reached=5/5
+d_k=64 unscaled: acc=0.990 steps90=300 init_max=0.902 reached=5/5
+d_k=256 scaled: acc=1.000 steps90=50 init_max=0.422 reached=5/5
+d_k=256 unscaled: acc=0.796 steps90=3000 init_max=0.950 reached=0/5

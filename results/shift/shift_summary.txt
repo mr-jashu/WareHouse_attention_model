@@ -1,0 +1,6 @@
+# Shift summary (H4: B-full MAE 1.8-3x; skill vs seasonal halves; B-spikes hurts relatively more than B-noise)
+attention test MAE=14.777, B-full MAE=29.134, ratio=1.97x
+test: attention={'mae_mean': 14.777, 'mae_std': 0.44, 'skill_vs_seasonal': 0.6963} seasonal={'mae': 48.651, 'rmse': 77.404}
+shift_noise: attention={'mae_mean': 21.643, 'mae_std': 0.296, 'skill_vs_seasonal': 0.6222} seasonal={'mae': 57.286, 'rmse': 83.274}
+shift_spikes: attention={'mae_mean': 21.327, 'mae_std': 0.515, 'skill_vs_seasonal': 0.6689} seasonal={'mae': 64.418, 'rmse': 108.551}
+shift_full: attention={'mae_mean': 29.134, 'mae_std': 0.55, 'skill_vs_seasonal': 0.6044} seasonal={'mae': 73.647, 'rmse': 118.809}

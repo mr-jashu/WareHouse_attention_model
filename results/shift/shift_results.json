@@ -1,0 +1,118 @@
+{
+  "test": {
+    "n": 696,
+    "baselines": {
+      "last": {
+        "mae": 30.43,
+        "rmse": 44.854
+      },
+      "ma24": {
+        "mae": 106.154,
+        "rmse": 120.789
+      },
+      "seasonal": {
+        "mae": 48.651,
+        "rmse": 77.404
+      }
+    },
+    "models": {
+      "attention": {
+        "mae_mean": 14.777,
+        "mae_std": 0.44,
+        "skill_vs_seasonal": 0.6963
+      },
+      "control": {
+        "mae_mean": 14.992,
+        "mae_std": 0.357,
+        "skill_vs_seasonal": 0.6918
+      }
+    }
+  },
+  "shift_noise": {
+    "n": 696,
+    "baselines": {
+      "last": {
+        "mae": 35.368,
+        "rmse": 51.689
+      },
+      "ma24": {
+        "mae": 102.18,
+        "rmse": 120.36
+      },
+      "seasonal": {
+        "mae": 57.286,
+        "rmse": 83.274
+      }
+    },
+    "models": {
+      "attention": {
+        "mae_mean": 21.643,
+        "mae_std": 0.296,
+        "skill_vs_seasonal": 0.6222
+      },
+      "control": {
+        "mae_mean": 21.566,
+        "mae_std": 0.112,
+        "skill_vs_seasonal": 0.6235
+      }
+    }
+  },
+  "shift_spikes": {
+    "n": 696,
+    "baselines": {
+      "last": {
+        "mae": 38.157,
+        "rmse": 69.163
+      },
+      "ma24": {
+        "mae": 107.465,
+        "rmse": 132.807
+      },
+      "seasonal": {
+        "mae": 64.418,
+        "rmse": 108.551
+      }
+    },
+    "models": {
+      "attention": {
+        "mae_mean": 21.327,
+        "mae_std": 0.515,
+        "skill_vs_seasonal": 0.6689
+      },
+      "control": {
+        "mae_mean": 20.735,
+        "mae_std": 0.136,
+        "skill_vs_seasonal": 0.6781
+      }
+    }
+  },
+  "shift_full": {
+    "n": 696,
+    "baselines": {
+      "last": {
+        "mae": 44.514,
+        "rmse": 76.408
+      },
+      "ma24": {
+        "mae": 110.684,
+        "rmse": 138.421
+      },
+      "seasonal": {
+        "mae": 73.647,
+        "rmse": 118.809
+      }
+    },
+    "models": {
+      "attention": {
+        "mae_mean": 29.134,
+        "mae_std": 0.55,
+        "skill_vs_seasonal": 0.6044
+      },
+      "control": {
+        "mae_mean": 28.404,
+        "mae_std": 0.15,
+        "skill_vs_seasonal": 0.6143
+      }
+    }
+  }
+}
