@@ -27,11 +27,13 @@ Runtimes on CPU: tests < 1 min, gradcheck ~1 min, toy sweep ~25 min, warehouse ~
 | Path | What |
 |---|---|
 | `docs/phase0_design.md` | Locked design, H1–H5, failure modes F1–F7 (committed before model code) |
-| `docs/attention_derivation.md` | Q/K/V, scaling (Var=d_k), softmax stability, shapes |
-| `docs/failure_investigation.md` | Spike-onset failure: 11× MAE gap, floor + tail overshoot |
+| `docs/attention_derivation.md` (+ alias `docs/mathematical_derivation.md`) | Q/K/V, scaling (Var=d_k), softmax stability, shapes |
+| `docs/experiments.md` | Consolidated record: toy, ablation, warehouse, shift, failure + traceability |
+| `docs/debugging.md` | PRD §17 debugging evidence (2 real bugs, hypothesis→fix→verification) |
+| `docs/failure_investigation.md` (+ alias `docs/failure_analysis.md`) | Spike-onset failure: 11× MAE gap, floor + tail overshoot |
 | `docs/reflection.md` | 11 reflection questions with hypothesis verdicts |
 | `docs/ai_assistance_log.md` | Tool log incl. two real bugs found by running code |
-| `docs/demo.md` | 7-part demo instructions |
+| `docs/demo.md` (+ `demo/DEMO.md`) | 7-part demo instructions |
 | `src/data_generator.py` | Synthetic generator, Regime A/B, windows/features, CLI |
 | `src/attention.py` | First-principles attention (raw ops only), stable softmax, NumPy reference |
 | `src/models.py` | Warehouse model + uniform-pooling control |

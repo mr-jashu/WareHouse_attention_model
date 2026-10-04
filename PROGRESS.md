@@ -7,7 +7,7 @@ Deadline: **Sun 04 Oct 2026, 06:57** (confirm timezone in the email). Submit onl
 | 1 | Source code | `src/` | DONE (attention, models, baselines, generator) |
 | 2 | README | `README.md` | DONE (with results table) |
 | 3 | Phase 0 design document | `docs/phase0_design.md` | DONE (commit before anything else; Amendment 1 logged) |
-| 4 | Mathematical derivation | `docs/attention_derivation.md` | DONE |
+| 4 | Mathematical derivation | `docs/attention_derivation.md` (+ alias `docs/mathematical_derivation.md`) | DONE |
 | 5 | Synthetic dataset generator | `src/data_generator.py` | DONE, 22 tests pass |
 | 6 | First-principles attention | `src/attention.py` | DONE (raw ops only) |
 | 7 | Gradient verification | `experiments/gradcheck.py` | DONE (float64 1e-9 < 1e-6; `results/gradcheck.txt`) |
@@ -16,12 +16,14 @@ Deadline: **Sun 04 Oct 2026, 06:57** (confirm timezone in the email). Submit onl
 | 10 | Baseline implementation | `src/baselines.py` | DONE (last/seasonal/MA-24) |
 | 11 | Ablation experiment (scaled vs unscaled) | `experiments/toy_ablation.py` | DONE (H1 holds; `results/ablation/`) |
 | 12 | Generalisation experiment | `experiments/shift.py` | DONE (H4 mixed; `results/shift/`) |
-| 13 | Failure investigation | `docs/failure_investigation.md` | DONE (F1/F2 onset 11× gap) |
+| 13 | Failure investigation | `docs/failure_investigation.md` (+ alias `docs/failure_analysis.md`) | DONE (F1/F2 onset 11× gap) |
 | 14 | Test suite | `tests/` | DONE (32/32 pass) |
 | 15 | Experiment results | `results/` | DONE (gradcheck, ablation, warehouse+checkpoints, shift, data) |
 | 16 | Reflection (11 questions, PRD section 26) | `docs/reflection.md` | DONE |
 | 17 | AI assistance log | `docs/ai_assistance_log.md` | DONE (incl. 2 real bugs) |
-| 18 | Demo instructions / recording | `docs/demo.md` | DONE |
+| 18 | Demo instructions / recording | `docs/demo.md` (+ `demo/DEMO.md`) | DONE |
+| 19 | Consolidated experiment record | `docs/experiments.md` | DONE (04 Oct 2026: added to match PRD §21 filename) |
+| 20 | Debugging evidence | `docs/debugging.md` | DONE (04 Oct 2026: extracted from AI log into dedicated PRD §17 doc) |
 
 ## Order of work
 1. **[done]** Phase 0 -> commit. Data generator + tests.
